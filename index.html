@@ -33,11 +33,14 @@
                     <li><a href="#contact" class="lien-navigation">Contact</a></li>
                 </ul>
                 
-                <button class="bouton-menu-mobile" aria-label="Menu mobile">
-                    <span class="ligne-menu"></span>
-                    <span class="ligne-menu"></span>
-                    <span class="ligne-menu"></span>
-                </button>
+                <div class="controles-navigation">
+                    <button class="bouton-mode-sombre" aria-label="Basculer le mode sombre" title="Mode sombre"></button>
+                    <button class="bouton-menu-mobile" aria-label="Menu mobile">
+                        <span class="ligne-menu"></span>
+                        <span class="ligne-menu"></span>
+                        <span class="ligne-menu"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -462,6 +465,9 @@
         </div>
     </div>
 
+    <!-- Overlay de transition -->
+    <div class="page-transition"></div>
+    
     <!-- Scripts JavaScript -->
     <script src="scripts/interactions.js"></script>
 </body>

@@ -6,6 +6,8 @@
 // Variables globales
 let menuMobileOuvert = false;
 let observateurScroll = null;
+let modeSombre = false;
+let transitionEnCours = false;
 
 /**
  * Initialisation du script au chargement de la page
@@ -13,13 +15,42 @@ let observateurScroll = null;
 document.addEventListener('DOMContentLoaded', function() {
     // Initialisation des différents modules
     initialiserNavigation();
+    initialiserModeSombre();
     initialiserAnimationsScroll();
     initialiserProgressionCompetences();
     initialiserFormulaire();
     initialiserScrollFluide();
+    initialiserAnimationsEntree();
     
     console.log('Portfolio initialisé avec succès');
 });
+
+/**
+ * Initialiser les animations d'entrée de page
+ */
+function initialiserAnimationsEntree() {
+    // Animer les sections au scroll
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('section-anime');
+    });
+    
+    // Observer pour les animations d'entrée
+    const observateurEntree = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+    });
+    
+    sections.forEach(section => {
+        observateurEntree.observe(section);
+    });
+}
 
 /**
  * Gestion de la navigation principale et mobile
@@ -87,11 +118,9 @@ function mettreAJourNavigationScroll() {
     const scrollY = window.scrollY;
     
     if (scrollY > 50) {
-        entete.style.background = 'rgba(255, 255, 255, 0.98)';
-        entete.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        entete.classList.add('scrolled');
     } else {
-        entete.style.background = 'rgba(255, 255, 255, 0.95)';
-        entete.style.boxShadow = 'none';
+        entete.classList.remove('scrolled');
     }
 }
 
@@ -128,6 +157,71 @@ function mettreAJourLienActif(lienClique) {
     });
     
     lienClique.classList.add('actif');
+}
+
+/**
+ * Initialiser le mode sombre
+ */
+function initialiserModeSombre() {
+    const boutonModeSombre = document.querySelector('.bouton-mode-sombre');
+    
+    // Vérifier la préférence sauvegardée
+    const preferenceSauvee = localStorage.getItem('mode-sombre');
+    if (preferenceSauvee === 'true') {
+        activerModeSombre();
+    }
+    
+    // Écouter le clic sur le bouton
+    if (boutonModeSombre) {
+        boutonModeSombre.addEventListener('click', basculerModeSombre);
+    }
+}
+
+/**
+ * Basculer entre mode clair et mode sombre
+ */
+function basculerModeSombre() {
+    if (transitionEnCours) return;
+    
+    transitionEnCours = true;
+    const overlay = document.querySelector('.page-transition');
+    
+    // Animer la transition
+    overlay.classList.add('active');
+    
+    setTimeout(() => {
+        if (modeSombre) {
+            desactiverModeSombre();
+        } else {
+            activerModeSombre();
+        }
+        
+        overlay.classList.remove('active');
+        overlay.classList.add('complete');
+        
+        setTimeout(() => {
+            overlay.classList.remove('complete');
+            transitionEnCours = false;
+        }, 600);
+    }, 300);
+}
+
+/**
+ * Activer le mode sombre
+ */
+function activerModeSombre() {
+    document.body.classList.add('mode-sombre');
+    modeSombre = true;
+    localStorage.setItem('mode-sombre', 'true');
+}
+
+/**
+ * Désactiver le mode sombre
+ */
+function desactiverModeSombre() {
+    document.body.classList.remove('mode-sombre');
+    modeSombre = false;
+    localStorage.setItem('mode-sombre', 'false');
 }
 
 /**

@@ -48,19 +48,30 @@
         --espacement-lg: 1.5rem;
     }
     
-    /* Navigation mobile */
+    /* Navigation mobile moderne */
+    .entete-principal {
+        width: calc(100% - var(--espacement-md));
+        top: var(--espacement-xs);
+    }
+    
+    .conteneur-navigation {
+        padding: var(--espacement-sm) var(--espacement-md);
+    }
+    
     .menu-navigation {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: calc(100% + var(--espacement-sm));
+        left: var(--espacement-md);
+        right: var(--espacement-md);
         background: var(--fond-carte);
         flex-direction: column;
         padding: var(--espacement-md);
         box-shadow: var(--ombre-forte);
-        border-top: 1px solid var(--bordure-principale);
-        gap: var(--espacement-md);
+        border-radius: var(--rayon-lg);
+        border: 1px solid var(--bordure-principale);
+        gap: var(--espacement-sm);
+        backdrop-filter: blur(20px);
     }
     
     .menu-navigation.actif {
@@ -69,6 +80,25 @@
     
     .bouton-menu-mobile {
         display: flex;
+    }
+    
+    .controles-navigation {
+        gap: var(--espacement-xs);
+    }
+    
+    .bouton-mode-sombre {
+        width: 50px;
+        height: 25px;
+        margin-left: 0;
+    }
+    
+    .bouton-mode-sombre::before {
+        width: 21px;
+        height: 21px;
+    }
+    
+    body.mode-sombre .bouton-mode-sombre::before {
+        transform: translateX(25px);
     }
     
     .bouton-menu-mobile.actif .ligne-menu:nth-child(1) {
@@ -426,6 +456,21 @@
     /* Footer */
     .contenu-footer {
         font-size: 0.85rem;
+    }
+    
+    /* Ajustements spéciaux pour le mode sombre responsive */
+    body.mode-sombre .entete-principal {
+        background: rgba(15, 15, 35, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    body.mode-sombre .entete-principal.scrolled {
+        background: rgba(15, 15, 35, 0.95);
+    }
+    
+    body.mode-sombre .menu-navigation {
+        background: rgba(22, 33, 62, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 }
 
