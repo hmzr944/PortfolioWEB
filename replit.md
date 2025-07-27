@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a professional portfolio website for Alex Martin, a web development student in an apprenticeship program. The portfolio is built with vanilla HTML, CSS, and JavaScript, focusing on modern design principles and responsive user experience. It showcases projects, skills, and provides a contact form to attract tech recruiters.
+This is a professional portfolio website for Alex Martin, a web development student in an apprenticeship program. The portfolio is built with vanilla HTML, CSS, and JavaScript, featuring an ultra-modern design with purple theme (#8b5cf6), dark mode toggle, and advanced animations. The portfolio is designed to impress tech recruiters with cutting-edge visual effects and professional project showcase including Laravel + Vue.js applications.
 
 ## User Preferences
 
@@ -33,9 +33,9 @@ Preferred communication style: Simple, everyday language.
 - **Active link highlighting** based on current section
 
 ### Content Sections
-1. **Hero/Home section** with introduction and call-to-action
+1. **Hero/Home section** with animated introduction and call-to-action
 2. **About section** with personal information and career objectives
-3. **Projects section** showcasing 3 main projects with images and tech stacks
+3. **Projects section** showcasing 4 main projects including Laravel + Vue.js e-commerce platform
 4. **Skills section** with animated progress bars by category
 5. **Contact section** with functional form and contact information
 

@@ -48,10 +48,11 @@
         --espacement-lg: 1.5rem;
     }
     
-    /* Navigation mobile moderne */
+    /* Navigation mobile moderne - reste fixe */
     .entete-principal {
         width: calc(100% - var(--espacement-md));
         top: var(--espacement-xs);
+        position: fixed !important;
     }
     
     .conteneur-navigation {

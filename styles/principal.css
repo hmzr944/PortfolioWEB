@@ -257,10 +257,43 @@ body.mode-sombre .menu-navigation {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 120px;
     background: linear-gradient(135deg, var(--fond-principal) 0%, var(--fond-secondaire) 100%);
     position: relative;
     overflow: hidden;
+}
+
+/* Animations d'entrée pour toutes les sections sauf accueil */
+section:not(.section-accueil) {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section.section-anime:not(.section-accueil) {
+    animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+/* Section d'accueil toujours visible */
+.section-accueil {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section-accueil::before {
@@ -509,10 +542,10 @@ section {
     font-weight: bold;
 }
 
-/* Section Projets */
+/* Section Projets ultra-moderne */
 .grille-projets {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: var(--espacement-xl);
 }
 
@@ -522,15 +555,36 @@ section {
     overflow: hidden;
     box-shadow: var(--ombre-legere);
     border: 1px solid var(--bordure-principale);
-    transition: var(--transition-normale);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.6s ease-out forwards;
+    position: relative;
+}
+
+.carte-projet::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--rayon-lg);
+    padding: 2px;
+    background: linear-gradient(135deg, var(--couleur-primaire), var(--couleur-accent));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .carte-projet:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--ombre-forte);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.carte-projet:hover::before {
+    opacity: 1;
 }
 
 .image-projet {
@@ -559,6 +613,14 @@ section {
 
 .projet-fullstack {
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.projet-laravel-vue {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.projet-mobile {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 .icone-projet {
@@ -599,6 +661,24 @@ section {
     font-size: 0.85rem;
     font-weight: 500;
     border: 1px solid var(--bordure-principale);
+    transition: all var(--transition-rapide);
+}
+
+.tag-techno:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tag-techno.laravel {
+    background: linear-gradient(135deg, #ff2d20, #e74c3c);
+    color: white;
+    border: none;
+}
+
+.tag-techno.vue {
+    background: linear-gradient(135deg, #4fc08d, #42b883);
+    color: white;
+    border: none;
 }
 
 .liens-projet {
