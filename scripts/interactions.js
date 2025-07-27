@@ -31,11 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function initialiserAnimationsEntree() {
     // Animer les sections au scroll
     const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('section-anime');
-    });
     
-    // Observer pour les animations d'entrée
+    // Rendre la première section visible immédiatement
+    const premierSection = sections[0];
+    if (premierSection) {
+        premierSection.classList.add('visible');
+    }
+    
+    // Observer pour les animations d'entrée des autres sections
     const observateurEntree = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -43,12 +46,15 @@ function initialiserAnimationsEntree() {
             }
         });
     }, {
-        threshold: 0.2,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
     
-    sections.forEach(section => {
-        observateurEntree.observe(section);
+    // Observer toutes les sections sauf la première
+    sections.forEach((section, index) => {
+        if (index > 0) {
+            observateurEntree.observe(section);
+        }
     });
 }
 
@@ -181,29 +187,13 @@ function initialiserModeSombre() {
  * Basculer entre mode clair et mode sombre
  */
 function basculerModeSombre() {
-    if (transitionEnCours) return;
+    console.log('Basculement mode sombre, état actuel:', modeSombre);
     
-    transitionEnCours = true;
-    const overlay = document.querySelector('.page-transition');
-    
-    // Animer la transition
-    overlay.classList.add('active');
-    
-    setTimeout(() => {
-        if (modeSombre) {
-            desactiverModeSombre();
-        } else {
-            activerModeSombre();
-        }
-        
-        overlay.classList.remove('active');
-        overlay.classList.add('complete');
-        
-        setTimeout(() => {
-            overlay.classList.remove('complete');
-            transitionEnCours = false;
-        }, 600);
-    }, 300);
+    if (modeSombre) {
+        desactiverModeSombre();
+    } else {
+        activerModeSombre();
+    }
 }
 
 /**
