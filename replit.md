@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a professional portfolio website for Alex Martin, a web development student in an apprenticeship program. The portfolio is built with vanilla HTML, CSS, and JavaScript, featuring an ultra-modern design with purple theme (#8b5cf6), dark mode toggle, and advanced animations. The portfolio is designed to impress tech recruiters with cutting-edge visual effects and professional project showcase including Laravel + Vue.js applications.
+This is a professional portfolio website for Hamza Mezouar, a web development student. The portfolio is built with vanilla HTML, CSS, and JavaScript, featuring an ultra-modern design with purple theme (#8b5cf6), dark mode toggle, and advanced animations. The portfolio is designed to impress tech recruiters with cutting-edge visual effects and professional project showcase including Laravel + Vue.js applications.
 
 ## User Preferences
 
