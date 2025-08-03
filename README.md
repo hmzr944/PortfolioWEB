@@ -1,42 +1,48 @@
-# Portfolio Professionnel - Alex Martin
+Portfolio Professionnel - Hamza Mezouar
 
-Portfolio professionnel complet développé en HTML, CSS et JavaScript natif pour un étudiant en alternance développement web. Conçu pour impressionner les recruteurs tech avec un design moderne et des bonnes pratiques de développement.
+Portfolio développé en HTML, CSS et JavaScript pour mettre en valeur mes compétences en développement web. Ce projet a été conçu avec une approche moderne et professionnelle, en suivant les bonnes pratiques pour offrir une expérience utilisateur fluide et responsive.
 
-## 🎯 Caractéristiques
+🎯 Objectif
+Présenter mes projets, compétences et parcours de manière claire et attrayante afin de convaincre des recruteurs dans le cadre d'une alternance BTS SIO option SLAM.
 
-### Design & UX
-- **Design moderne et minimaliste** inspiré des standards tech
-- **Palette de couleurs sobres** (fond clair avec couleur d'accent bleu)
-- **Typographie professionnelle** avec la police Inter
-- **Layout responsive mobile-first** utilisant Flexbox et CSS Grid
-- **Animations CSS discrètes** (hover, fade-in au scroll)
-- **Interface intuitive** avec navigation claire
+✅ Caractéristiques principales
+Design & Expérience Utilisateur
+Design sobre et moderne, inspiré des standards actuels des entreprises tech
+Palette de couleurs professionnelle (fond clair, accents bleus)
+Typographie Inter pour un rendu lisible et élégant
+Responsive design mobile-first avec Flexbox et CSS Grid
+Animations légères pour rendre la navigation agréable (hover, fade-in)
+Navigation intuitive avec un menu clair
 
-### Fonctionnalités
-- **Navigation fluide** entre les sections avec scroll smooth
-- **Menu mobile** responsive avec animation hamburger
-- **Section projets** avec 3 projets (front-end, responsive, full-stack)
-- **Section compétences** avec barres de progression animées
-- **Formulaire de contact** fonctionnel avec validation JavaScript
-- **Animations au scroll** avec Intersection Observer API
-- **Message de confirmation** après soumission du formulaire
+Fonctionnalités
+Défilement fluide entre les sections (scroll smooth)
+Menu mobile avec animation hamburger
+Section Projets : présentation de 3 projets (front-end, responsive, full-stack)
+Section Compétences avec barres de progression animées
+Formulaire de contact avec validation en JavaScript
+Animations au scroll via l’API Intersection Observer
+Message de confirmation après envoi du formulaire
 
-### Sections incluses
-1. **En-tête** avec logo/nom et navigation claire
-2. **Présentation** courte et impactante orientée alternance
-3. **À propos** avec informations personnelles et objectifs
-4. **Projets** avec captures d'écran, descriptions et stack technique
-5. **Compétences** organisées par catégories avec niveaux
-6. **Contact** avec formulaire et informations de contact
+📂 Sections du portfolio
+Accueil : Nom, rôle et lien vers les sections principales
+Présentation : Objectif professionnel et description rapide
+À propos : Informations personnelles et motivation
+Projets : Captures d’écran + technologies utilisées
+Compétences : Regroupées par catégorie avec niveau visuel
+Contact : Formulaire + liens directs
 
-## 🛠️ Technologies utilisées
+🛠️ Technologies utilisées
+HTML5 (structure sémantique)
+CSS3 (variables, animations, responsive design)
+JavaScript Vanilla (interactions et validation)
+Google Fonts (Inter) pour la typographie
+SVG pour les icônes et éléments graphiques
 
-- **HTML5** sémantique bien structuré
-- **CSS3** natif avec variables CSS et animations
-- **JavaScript** vanilla pour l'interactivité
-- **SVG** pour les icônes et éléments graphiques
-- **Google Fonts** (Inter) pour la typographie
-- **Responsive design** mobile-first
 
-## 📁 Structure du projet
-
+📦 Portfolio-Hamza
+ ┣ 📂 assets
+ ┃ ┣ 📂 css
+ ┃ ┣ 📂 js
+ ┃ ┗ 📂 images
+ ┣ 📄 index.html
+ ┣ 📄 README.md
