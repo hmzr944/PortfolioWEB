@@ -157,6 +157,10 @@ body.mode-sombre .entete-principal.scrolled {
     position: relative;
 }
 
+.sans-décoration {
+    text-decoration: none,
+}
+
 .sous-titre-logo {
     font-size: 0.75rem;
     color: var(--texte-secondaire);
