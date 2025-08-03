@@ -78,7 +78,7 @@ body {
 /* Mode sombre */
 body.mode-sombre {
     --fond-principal: #0f0f23;
-    --fond-secondaire: #1a1a2e;
+    --fond-secondaire: #000000;
     --fond-carte: #16213e;
     --fond-overlay: rgba(0, 0, 0, 0.95);
     
@@ -107,7 +107,7 @@ body.mode-sombre {
     width: calc(100% - var(--espacement-lg));
     max-width: 1200px;
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */ /* Enlevé le blur */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--rayon-xl);
     z-index: 1000;
@@ -122,12 +122,11 @@ body.mode-sombre {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     transform: translateX(-50%) scale(0.98);
 }
-
 body.mode-sombre .entete-principal {
     background: rgba(15, 15, 35, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    /* backdrop-filter: blur(20px); */ /* Enlevé le blur */
 }
-
 body.mode-sombre .entete-principal.scrolled {
     background: rgba(15, 15, 35, 0.95);
 }
@@ -175,7 +174,7 @@ body.mode-sombre .entete-principal.scrolled {
     background: rgba(255, 255, 255, 0.1);
     border-radius: var(--rayon-lg);
     padding: var(--espacement-xs);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */ /* Enlevé le blur */
 }
 
 body.mode-sombre .menu-navigation {
@@ -198,7 +197,6 @@ body.mode-sombre .menu-navigation {
 .lien-navigation:hover {
     color: var(--couleur-primaire);
     background: rgba(139, 92, 246, 0.1);
-    transform: translateY(-2px);
 }
 
 .lien-navigation.actif {
@@ -211,10 +209,9 @@ body.mode-sombre .menu-navigation {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
     transition: left 0.5s;
 }
 
@@ -523,7 +520,17 @@ body.mode-sombre .section-accueil::before {
 
 /* Sections générales */
 section {
-    padding: var(--espacement-xxl) 0;
+
+    padding: var(--espacement-xl) 0; /* Par exemple, remplace --espacement-xxl par --espacement-xl */
+}
+.section-anime {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-anime.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-a-propos,
