@@ -2,10 +2,10 @@ Portfolio Professionnel - Hamza Mezouar
 
 Portfolio développé en HTML, CSS et JavaScript pour mettre en valeur mes compétences en développement web. Ce projet a été conçu avec une approche moderne et professionnelle, en suivant les bonnes pratiques pour offrir une expérience utilisateur fluide et responsive.
 
-🎯 Objectif
+Objectif
 Présenter mes projets, compétences et parcours de manière claire et attrayante afin de convaincre des recruteurs dans le cadre d'une alternance BTS SIO option SLAM.
 
-✅ Caractéristiques principales
+Caractéristiques principales
 Design & Expérience Utilisateur
 Design sobre et moderne, inspiré des standards actuels des entreprises tech
 Palette de couleurs professionnelle (fond clair, accents bleus)
@@ -31,7 +31,7 @@ Projets : Captures d’écran + technologies utilisées
 Compétences : Regroupées par catégorie avec niveau visuel
 Contact : Formulaire + liens directs
 
-🛠️ Technologies utilisées
+Technologies utilisées
 HTML5 (structure sémantique)
 CSS3 (variables, animations, responsive design)
 JavaScript Vanilla (interactions et validation)
@@ -39,7 +39,7 @@ Google Fonts (Inter) pour la typographie
 SVG pour les icônes et éléments graphiques
 
 
-📦 Portfolio-Hamza
+Portfolio-Hamza
  ┣ 📂 assets
  ┃ ┣ 📂 css
  ┃ ┣ 📂 js
