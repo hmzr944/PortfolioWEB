@@ -3,7 +3,7 @@ Portfolio Professionnel - Hamza Mezouar
 Portfolio développé en HTML, CSS et JavaScript pour mettre en valeur mes compétences en développement web. Ce projet a été conçu avec une approche moderne et professionnelle, en suivant les bonnes pratiques pour offrir une expérience utilisateur fluide et responsive.
 
 Objectif
-Présenter mes projets, compétences et parcours de manière claire et attrayante afin de convaincre des recruteurs dans le cadre d'une alternance BTS SIO option SLAM.
+Présenter mes projets, compétences et parcours de manière claire et attrayante afin de convaincre des recruteurs dans le cadre d'une alternance TP Concepteur & Développeur web.
 
 Caractéristiques principales
 Design & Expérience Utilisateur
